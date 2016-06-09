@@ -21,6 +21,10 @@ class myTeams
           $this->db_database = $database;
      }
 
+     /**
+      * Connect up the database
+      * @return boolean Returns true if we connect up
+      */
      public function connectToDb()
      {
 
@@ -28,9 +32,10 @@ class myTeams
 
           if ($this->conn->connect_error)
           {
-               die('Connect Error (' . $this->conn->connect_errno . ') '. $this->conn->connect_error);
+               return false;
           }
 
+          return true;
      }
 
 
@@ -39,7 +44,16 @@ class myTeams
 
 $app = new myTeams($db_host,$db_username,$db_password,$db_database);
 
-$app->connectToDb();
+$db = $app->connectToDb();
+
+if($db)
+{
+     // We got a connect to the db so get to work.
+}
+else
+{
+     // Didn't connect up to the db.
+}
 
 
 
