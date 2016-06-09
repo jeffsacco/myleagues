@@ -12,6 +12,8 @@ class myTeams
      protected $db_password;
      protected $db_database;
 
+     protected $league_data;
+
 
      public function __construct($host,$username,$password,$database)
      {
@@ -38,6 +40,23 @@ class myTeams
           return true;
      }
 
+     public function getLeagues($limit_lower = null, $limit_upper = null)
+     {
+          $sql = "SELECT id, uid, tid, sid, lid, league_tid, league_name, league_provider, last_sync FROM ft_myleagues limit $limit_lower, $limit_upper";
+
+          $val = $this->conn->query($sql);
+
+          if($val)
+          {
+               $this->league_data = $val;
+               return true;
+          }
+          else
+          {
+               return false;
+          }
+     }
+
 
 
 }
@@ -49,11 +68,27 @@ $db = $app->connectToDb();
 if($db)
 {
      // We got a connect to the db so get to work.
+
+     // Move on to getting the leagues
+     $league_data = $app->getLeagues(0,10);
+
+     if($league_data)
+     {
+          // We got some valid league data
+
+     }
+     else
+     {
+          echo "Something went wrong grabbing the league data.  Check it out.";
+     }
 }
 else
 {
      // Didn't connect up to the db.
+     echo "Couldn't connect up the database";
 }
+
+
 
 
 
