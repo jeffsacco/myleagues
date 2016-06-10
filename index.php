@@ -374,72 +374,72 @@ class myTeams
 
           $arr['bpts_pass_yrd'] = array();
 
-                    $var1 = array('pts'=>$data['bpp1'],'rec'=>'0.00','yrd'=>$data['bppy1']);
+                    $var1 = array('pts'=>$data['bpp1'],'rec'=>0.00,'yrd'=>$data['bppy1']);
 
                $arr['bpts_pass_yrd'][] = $var1;
 
-                    $var2 = array('pts'=>$data['bpp2'],'rec'=>'0.00','yrd'=>$data['bppy2']);
+                    $var2 = array('pts'=>$data['bpp2'],'rec'=>0.00,'yrd'=>$data['bppy2']);
 
                $arr['bpts_pass_yrd'][] = $var2;
 
 
           $arr['bpts_rush_yrd'] = array();
 
-                    $var1 = array('pts'=>$data['bpru1'],'rec'=>'0.00','yrd'=>$data['bpruy1']);
+                    $var1 = array('pts'=>$data['bpru1'],'rec'=>0.00,'yrd'=>$data['bpruy1']);
 
                $arr['bpts_rush_yrd'][] = $var1;
 
-                    $var2 = array('pts'=>$data['bpru2'],'rec'=>'0.00','yrd'=>$data['bpruy2']);
+                    $var2 = array('pts'=>$data['bpru2'],'rec'=>0.00,'yrd'=>$data['bpruy2']);
 
                $arr['bpts_rush_yrd'][] = $var2;
 
 
           $arr['bpts_rec_yrd_rb'] = array();
 
-                    $var1 = array('pts'=>$data['bprc1'],'rec'=>'0.00','yrd'=>$data['bprcy1']);
+                    $var1 = array('pts'=>$data['bprc1'],'rec'=>0.00,'yrd'=>$data['bprcy1']);
 
                $arr['bpts_rec_yrd_rb'][] = $var1;
 
-                    $var2 = array('pts'=>$data['bprc2'],'rec'=>'0.00','yrd'=>$data['bprcy2']);
+                    $var2 = array('pts'=>$data['bprc2'],'rec'=>0.00,'yrd'=>$data['bprcy2']);
 
                $arr['bpts_rec_yrd_rb'][] = $var2;
 
 
           $arr['bpts_rec_yrd_wr'] = array();
 
-                    $var1 = array('pts'=>$data['bprc1'],'rec'=>'0.00','yrd'=>$data['bprcy1']);
+                    $var1 = array('pts'=>$data['bprc1'],'rec'=>0.00,'yrd'=>$data['bprcy1']);
 
                $arr['bpts_rec_yrd_wr'][] = $var1;
 
-                    $var2 = array('pts'=>$data['bprc2'],'rec'=>'0.00','yrd'=>$data['bprcy2']);
+                    $var2 = array('pts'=>$data['bprc2'],'rec'=>0.00,'yrd'=>$data['bprcy2']);
 
                $arr['bpts_rec_yrd_wr'][] = $var2;
 
          $arr['bpts_rec_yrd_te'] = array();
 
-                    $var1 = array('pts'=>$data['bprc1'],'rec'=>'0.00','yrd'=>$data['bprcy1']);
+                    $var1 = array('pts'=>$data['bprc1'],'rec'=>0.00,'yrd'=>$data['bprcy1']);
 
                $arr['bpts_rec_yrd_te'][] = $var1;
 
-                    $var2 = array('pts'=>$data['bprc2'],'rec'=>'0.00','yrd'=>$data['bprcy2']);
+                    $var2 = array('pts'=>$data['bprc2'],'rec'=>0.00,'yrd'=>$data['bprcy2']);
 
                $arr['bpts_rec_yrd_te'][] = $var2;
 
 
           $arr['bpts_rec_rec_rb'] = array();
-          $arr['bpts_rec_rec_rb']['pts']= "0.00";
-          $arr['bpts_rec_rec_rb']['rec']= "0.00";
-          $arr['bpts_rec_rec_rb']['yrd']= "0.00";
+          $arr['bpts_rec_rec_rb']['pts']= 0.00;
+          $arr['bpts_rec_rec_rb']['rec']= 0.00;
+          $arr['bpts_rec_rec_rb']['yrd']= 0.00;
 
           $arr['bpts_rec_rec_wr'] = array();
-          $arr['bpts_rec_rec_wr']['pts']= "0.00";
-          $arr['bpts_rec_rec_wr']['rec']= "0.00";
-          $arr['bpts_rec_rec_wr']['yrd']= "0.00";
+          $arr['bpts_rec_rec_wr']['pts']= 0.00;
+          $arr['bpts_rec_rec_wr']['rec']= 0.00;
+          $arr['bpts_rec_rec_wr']['yrd']= 0.00;
 
           $arr['bpts_rec_rec_te'] = array();
-          $arr['bpts_rec_rec_te']['pts']= "0.00";
-          $arr['bpts_rec_rec_te']['rec']= "0.00";
-          $arr['bpts_rec_rec_te']['yrd']= "0.00";
+          $arr['bpts_rec_rec_te']['pts']= 0.00;
+          $arr['bpts_rec_rec_te']['rec']= 0.00;
+          $arr['bpts_rec_rec_te']['yrd']= 0.00;
 
           $arr['bpts_yrd_100'] = $data['tot100'];
           $arr['bpts_yrd_300'] = $data['tot300'];
