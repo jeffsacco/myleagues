@@ -239,9 +239,10 @@ class myTeams
 
           $arr['fg_made'] = array();
 
-                    $var1 = array('name'=>'0-99','pts'=>$data['FG'],'lower'=>0,'upper'=>99);
+          // Need to do a logic check here
+          if($data['FG'] || $data['bpfg29'] > 0 || $data['bpfg39'] > 0 || $data['bpfg49'] || $data['bpfg50'])
+          {
 
-               $arr['fg_made'][] = $var1;
 
                     $var2 = array('name'=>'0-29','pts'=>$data['bpfg29'],'lower'=>0,'upper'=>29);
 
@@ -258,6 +259,13 @@ class myTeams
                     $var5 = array('name'=>'50+','pts'=>$data['bpfg50'],'lower'=>50,'upper'=>99);
 
                $arr['fg_made'][] = $var5;
+          }
+          else
+          {
+                    $var1 = array('name'=>'0-99','pts'=>$data['FG'],'lower'=>0,'upper'=>99);
+
+               $arr['fg_made'][] = $var1;
+          }
 
 
           $arr['bpts_td'] = array();
