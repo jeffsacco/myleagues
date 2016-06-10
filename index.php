@@ -418,10 +418,26 @@ class myTeams
                $arr['bpts_rec_yrd_te'][] = $var2;
 
 
+          $arr['bpts_rec_rec_rb'] = array();
+          $arr['bpts_rec_rec_rb']['pts']= "0.00";
+          $arr['bpts_rec_rec_rb']['rec']= "0.00";
+          $arr['bpts_rec_rec_rb']['yrd']= "0.00";
 
+          $arr['bpts_rec_rec_wr'] = array();
+          $arr['bpts_rec_rec_wr']['pts']= "0.00";
+          $arr['bpts_rec_rec_wr']['rec']= "0.00";
+          $arr['bpts_rec_rec_wr']['yrd']= "0.00";
 
+          $arr['bpts_rec_rec_te'] = array();
+          $arr['bpts_rec_rec_te']['pts']= "0.00";
+          $arr['bpts_rec_rec_te']['rec']= "0.00";
+          $arr['bpts_rec_rec_te']['yrd']= "0.00";
 
-
+          $arr['bpts_yrd_100'] = $data['tot100'];
+          $arr['bpts_yrd_300'] = $data['tot300'];
+          $arr['bpts_pass_oop_td'] = $data['bptd'];
+          $arr['bpts_rush_oop_td'] = $data['brutd'];
+          $arr['bpts_rec_oop_td'] = $data['bretd'];
 
 
           return $arr;
