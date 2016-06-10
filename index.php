@@ -83,22 +83,57 @@ class myTeams
           {
                // Grab relevant data for the SQL query
 
-               $sql = "SELECT name, qbstrt,rbstrt,wrstrt,testrt,kstrt,dstrt,dlstrt,lbstrt,dbstrt,qbflex,rbflex,wrflex,teflex,kflex,dflex,dlflex,lbflex,dbflex FROM ft_myteams WHERE tid = ".$league['league']['tid']." AND sid = ".$league['league']['sid']." AND id = ".$league['league']['uid'];
+               $sql = "SELECT name FROM ft_myteams WHERE tid = ".$league['league']['tid']." AND sid = ".$league['league']['sid']." AND id = ".$league['league']['uid'];
 
-               $raw_data = $this->conn->query($sql);
+               $raw_data_teams = $this->conn->query($sql);
 
-               while($row = $raw_data->fetch_assoc())
+               $sql = "SELECT qbstrt,rbstrt,wrstrt,testrt,kstrt,dstrt,dlstrt,lbstrt,dbstrt,qbflex,rbflex,wrflex,teflex,kflex,dflex,dlflex,lbflex,dbflex FROM ft_myteams WHERE tid = ".$league['league']['tid']." AND sid = ".$league['league']['sid']." AND id = ".$league['league']['uid'];
+
+               $raw_data_positions = $this->conn->query($sql);
+
+               // Fetch all those players ids
+               $sql = "SELECT pid from ft_myteamplayers WHERE tid = ".$league['league']['tid']." AND id = ".$league['league']['uid'];
+
+               $raw_data_players = $this->conn->query($sql);
+
+               $player_string = $this->resultToArray($raw_data_players);
+
+               while($row = $raw_data_teams->fetch_assoc())
                {
                     $row['nickname'] = $row['name'];
                     $row['lastSync'] = $league['league']['last_sync'];
                     $row['userIsOwner'] = true;
                     $row['hostTeamId'] = $league['league']['tid'];
                     $row['matchups'] = "";
+                    $row['players'] = "[".$player_string."]";
                     $league['league']['teams'] = $row;
+
+                    // Add in the positions array
+                    $row1 = $raw_data_positions->fetch_assoc();
+                    $league['league']['teams']['positions'] = $row1;
 
                }
 
           }
+     }
+
+     public function resultToArray($data)
+     {
+          $string = "";
+
+          $num = $data->num_rows;
+
+          for ($i=1; $i <= $num; $i++)
+          {
+               $playerid = $data->fetch_assoc();
+               $string .= $playerid['pid'];
+               if($i != $num)
+               {
+                    $string .= ",";
+               }
+          }
+
+          return $string;
      }
 
 
