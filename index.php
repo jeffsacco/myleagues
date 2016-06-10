@@ -244,19 +244,19 @@ class myTeams
           {
 
 
-                    $var2 = array('name'=>'0-29','pts'=>$data['bpfg29'],'lower'=>0,'upper'=>29);
+                    $var2 = array('name'=>'0-29','pts'=>$data['FG']+$data['bpfg29'],'lower'=>0,'upper'=>29);
 
                $arr['fg_made'][] = $var2;
 
-                    $var3 = array('name'=>'30-39','pts'=>$data['bpfg39'],'lower'=>30,'upper'=>39);
+                    $var3 = array('name'=>'30-39','pts'=>$data['FG']+$data['bpfg39'],'lower'=>30,'upper'=>39);
 
                $arr['fg_made'][] = $var3;
 
-                    $var4 = array('name'=>'40-49','pts'=>$data['bpfg49'],'lower'=>40,'upper'=>49);
+                    $var4 = array('name'=>'40-49','pts'=>$data['FG']+$data['bpfg49'],'lower'=>40,'upper'=>49);
 
                $arr['fg_made'][] = $var4;
 
-                    $var5 = array('name'=>'50+','pts'=>$data['bpfg50'],'lower'=>50,'upper'=>99);
+                    $var5 = array('name'=>'50+','pts'=>$data['FG']+$data['bpfg50'],'lower'=>50,'upper'=>99);
 
                $arr['fg_made'][] = $var5;
           }
