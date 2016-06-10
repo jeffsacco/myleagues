@@ -239,46 +239,46 @@ class myTeams
 
           $arr['fg_made'] = array();
 
-                    $var1 = array('name'=>'0-99','pts'=>$data['FG'],'lower'=>'0','upper'=>99);
+                    $var1 = array('name'=>'0-99','pts'=>$data['FG'],'lower'=>0,'upper'=>99);
 
                $arr['fg_made'][] = $var1;
 
-                    $var2 = array('name'=>'0-29','pts'=>$data['bpfg29'],'lower'=>'0','upper'=>29);
+                    $var2 = array('name'=>'0-29','pts'=>$data['bpfg29'],'lower'=>0,'upper'=>29);
 
                $arr['fg_made'][] = $var2;
 
-                    $var3 = array('name'=>'30-39','pts'=>$data['bpfg39'],'lower'=>'30','upper'=>39);
+                    $var3 = array('name'=>'30-39','pts'=>$data['bpfg39'],'lower'=>30,'upper'=>39);
 
                $arr['fg_made'][] = $var3;
 
-                    $var4 = array('name'=>'40-49','pts'=>$data['bpfg49'],'lower'=>'40','upper'=>49);
+                    $var4 = array('name'=>'40-49','pts'=>$data['bpfg49'],'lower'=>40,'upper'=>49);
 
                $arr['fg_made'][] = $var4;
 
-                    $var5 = array('name'=>'50+','pts'=>$data['bpfg50'],'lower'=>'50','upper'=>99);
+                    $var5 = array('name'=>'50+','pts'=>$data['bpfg50'],'lower'=>50,'upper'=>99);
 
                $arr['fg_made'][] = $var5;
 
 
           $arr['bpts_td'] = array();
 
-                    $var1 = array('name'=>'0-9','pts'=>$data['bpy9'],'lower'=>'0','upper'=>9);
+                    $var1 = array('name'=>'0-9','pts'=>$data['bpy9'],'lower'=>0,'upper'=>9);
 
                $arr['bpts_td'][] = $var1;
 
-                    $var2 = array('name'=>'10-19','pts'=>$data['bpy19'],'lower'=>'10','upper'=>19);
+                    $var2 = array('name'=>'10-19','pts'=>$data['bpy19'],'lower'=>10,'upper'=>19);
 
                $arr['bpts_td'][] = $var2;
 
-                    $var3 = array('name'=>'20-29','pts'=>$data['bpy29'],'lower'=>'20','upper'=>29);
+                    $var3 = array('name'=>'20-29','pts'=>$data['bpy29'],'lower'=>20,'upper'=>29);
 
                $arr['bpts_td'][] = $var3;
 
-                    $var4 = array('name'=>'30-39','pts'=>$data['bpy39'],'lower'=>'30','upper'=>39);
+                    $var4 = array('name'=>'30-39','pts'=>$data['bpy39'],'lower'=>30,'upper'=>39);
 
                $arr['bpts_td'][] = $var4;
 
-                   $var5 = array('name'=>'40+','pts'=>$data['bpy40'],'lower'=>'40','upper'=>100);
+                   $var5 = array('name'=>'40+','pts'=>$data['bpy40'],'lower'=>40,'upper'=>100);
 
                $arr['bpts_td'][] = $var5;
 
@@ -304,38 +304,38 @@ class myTeams
 
           $arr['def_pts_allowed'] = array();
 
-                    $var1 = array('name'=>'0','pts'=>$data['pts_all_0'],'lower'=>'0','upper'=>0);
+                    $var1 = array('name'=>'0','pts'=>$data['pts_all_0'],'lower'=>0,'upper'=>0);
 
                $arr['def_pts_allowed'][] = $var1;
 
-                    $var2 = array('name'=>'1-6','pts'=>$data['pts_all_6'],'lower'=>'1','upper'=>6);
+                    $var2 = array('name'=>'1-6','pts'=>$data['pts_all_6'],'lower'=>1,'upper'=>6);
 
                $arr['def_pts_allowed'][] = $var2;
 
-                    $var3 = array('name'=>'7-13','pts'=>$data['pts_all_13'],'lower'=>'7','upper'=>13);
+                    $var3 = array('name'=>'7-13','pts'=>$data['pts_all_13'],'lower'=>7,'upper'=>13);
 
                $arr['def_pts_allowed'][] = $var3;
 
-                    $var4 = array('name'=>'14-20','pts'=>$data['pts_all_20'],'lower'=>'14','upper'=>20);
+                    $var4 = array('name'=>'14-20','pts'=>$data['pts_all_20'],'lower'=>14,'upper'=>20);
 
                $arr['def_pts_allowed'][] = $var4;
 
-                   $var5 = array('name'=>'21-27','pts'=>$data['pts_all_27'],'lower'=>'21','upper'=>27);
+                   $var5 = array('name'=>'21-27','pts'=>$data['pts_all_27'],'lower'=>21,'upper'=>27);
 
                $arr['def_pts_allowed'][] = $var5;
 
-                   $var6 = array('name'=>'28-34','pts'=>$data['pts_all_34'],'lower'=>'28','upper'=>34);
+                   $var6 = array('name'=>'28-34','pts'=>$data['pts_all_34'],'lower'=>28,'upper'=>34);
 
                $arr['def_pts_allowed'][] = $var6;
 
-                   $var7 = array('name'=>'35+','pts'=>$data['pts_all_35'],'lower'=>'35','upper'=>99);
+                   $var7 = array('name'=>'35+','pts'=>$data['pts_all_35'],'lower'=>35,'upper'=>99);
 
                $arr['def_pts_allowed'][] = $var7;
 
 
           $arr['def_yrd_allowed'] = array();
 
-                    $var1 = array('name'=>'0-199','pts'=>$data['yrds_0_199'],'lower'=>'0','upper'=>'199');
+                    $var1 = array('name'=>'0-199','pts'=>$data['yrds_0_199'],'lower'=>0,'upper'=>199);
 
                $arr['def_yrd_allowed'][] = $var1;
 
@@ -343,23 +343,23 @@ class myTeams
 
                //$arr['def_yrd_allowed'][] = $var2;
 
-                    $var3 = array('name'=>'200-299','pts'=>$data['yrds_200_299'],'lower'=>'200','upper'=>'299');
+                    $var3 = array('name'=>'200-299','pts'=>$data['yrds_200_299'],'lower'=>200,'upper'=>299);
 
                $arr['def_yrd_allowed'][] = $var3;
 
-                    $var4 = array('name'=>'300-349','pts'=>$data['yrds_300_349'],'lower'=>'300','upper'=>'349');
+                    $var4 = array('name'=>'300-349','pts'=>$data['yrds_300_349'],'lower'=>300,'upper'=>349);
 
                $arr['def_yrd_allowed'][] = $var4;
 
-                   $var5 = array('name'=>'350-399','pts'=>$data['yrds_350_399'],'lower'=>'350','upper'=>'399');
+                   $var5 = array('name'=>'350-399','pts'=>$data['yrds_350_399'],'lower'=>350,'upper'=>399);
 
                $arr['def_yrd_allowed'][] = $var5;
 
-                   $var6 = array('name'=>'400-449','pts'=>$data['yrds_400_449'],'lower'=>'400','upper'=>'449');
+                   $var6 = array('name'=>'400-449','pts'=>$data['yrds_400_449'],'lower'=>400,'upper'=>449);
 
                $arr['def_yrd_allowed'][] = $var6;
 
-                   $var7 = array('name'=>'450+','pts'=>$data['yrds_450'],'lower'=>'450','upper'=>'999');
+                   $var7 = array('name'=>'450+','pts'=>$data['yrds_450'],'lower'=>450,'upper'=>999);
 
                $arr['def_yrd_allowed'][] = $var7;
 
