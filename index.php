@@ -240,7 +240,7 @@ class myTeams
           $arr['fg_made'] = array();
 
           // Need to do a logic check here
-          if($data['FG'] || $data['bpfg29'] > 0 || $data['bpfg39'] > 0 || $data['bpfg49'] || $data['bpfg50'])
+          if($data['bpfg29'] > 0 || $data['bpfg39'] > 0 || $data['bpfg49'] || $data['bpfg50'])
           {
 
 
