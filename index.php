@@ -91,6 +91,12 @@ class myTeams
 
                $raw_data_positions = $this->conn->query($sql);
 
+               $sql = "SELECT * FROM ft_scoring WHERE sid = ".$league['league']['sid'];
+
+               $raw_data_scoringsystem = $this->conn->query($sql);
+
+               //print_r($raw_data_scoringsystem);
+
                // Fetch all those players ids
                $sql = "SELECT pid from ft_myteamplayers WHERE tid = ".$league['league']['tid']." AND id = ".$league['league']['uid'];
 
@@ -112,10 +118,17 @@ class myTeams
                     $row1 = $raw_data_positions->fetch_assoc();
                     $league['league']['teams']['positions'] = $row1;
 
+                    // Add in the scoring system
+                    $scoringSystem = $raw_data_scoringsystem->fetch_assoc();
+                    $alteredScoringSystem = $this->__transformScoringSystem($scoringSystem);
+                    $league['league']['teams']['scoringSystem'] = $alteredScoringSystem;
+
                }
 
           }
      }
+
+
 
      public function resultToArray($data)
      {
@@ -137,6 +150,20 @@ class myTeams
      }
 
 
+     private function __transformScoringSystem($data)
+     {
+          $arr = array();
+
+          $arr['_id'] = "";
+          $arr['name'] = $data['Name'];
+          $arr['isSystemPreset'] = "";
+          $arr['sortPriority'] = "";
+          $arr['pass_att'] = $data['Patt'];
+          $arr['pass_cmp'] = $data['Pcmp'];
+          $arr['pass_icmp'] = $data['Pinc'];
+
+          return $arr;
+     }
 
      public function jsonPrint()
      {
@@ -168,6 +195,9 @@ if($db)
      {
           // We got some valid league data
           $app->getTeams();
+
+
+
           $app->jsonPrint();
      }
      else
