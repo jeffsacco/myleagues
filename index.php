@@ -173,12 +173,12 @@ class myTeams
           $arr['rec_rb']['rec_td']= $data['RecTD'];
           $arr['rec_wr'] = array();
           $arr['rec_wr']['rec']= $data['Wrec'];
-          //$arr['rec_wr']['rec_yrd']= $data['WRecYrd'];
-          //$arr['rec_wr']['rec_td']= $data['WRecTD'];
+          $arr['rec_wr']['rec_yrd']= $data['RecYrd'];
+          $arr['rec_wr']['rec_td']= $data['RecTD'];
           $arr['rec_te'] = array();
           $arr['rec_te']['rec']= $data['Trec'];
-          //$arr['rec_te']['rec_yrd']= $data['TRecYrd'];
-          //$arr['rec_te']['rec_td']= $data['TRecTD'];
+          $arr['rec_te']['rec_yrd']= $data['RecYrd'];
+          $arr['rec_te']['rec_td']= $data['RecTD'];
           $arr['pr_yrd'] = $data['PrYrd'];
           $arr['pr_td'] = $data['PrTD'];
           $arr['kr_yrd'] = $data['KrYrd'];
@@ -237,6 +237,46 @@ class myTeams
           $arr['idp_pd'] = $data['PD'];
           $arr['idp_td'] = $data['DTD'];
 
+          $arr['fg_made'] = array();
+
+                    $var1 = array('name'=>'0-99','pts'=>$data['FG'],'lower'=>'0','upper'=>99);
+
+               $arr['fg_made'][] = $var1;
+
+                    $var2 = array('name'=>'0-29');
+
+               $arr['fg_made'][] = $var2;
+
+                    $var3 = array('name'=>'30-39');
+
+               $arr['fg_made'][] = $var3;
+
+
+          $arr['bpts_td'] = array();
+
+                    $var1 = array('name'=>'0-9','pts'=>$data['bpy9'],'lower'=>'0','upper'=>9);
+
+               $arr['bpts_td'][] = $var1;
+
+                    $var2 = array('name'=>'10-19','pts'=>$data['bpy19'],'lower'=>'10','upper'=>19);
+
+               $arr['bpts_td'][] = $var2;
+
+                    $var3 = array('name'=>'20-29','pts'=>$data['bpy29'],'lower'=>'20','upper'=>29);
+
+               $arr['bpts_td'][] = $var3;
+
+                    $var4 = array('name'=>'30-39','pts'=>$data['bpy39'],'lower'=>'30','upper'=>39);
+
+               $arr['bpts_td'][] = $var4;
+
+                   $var5 = array('name'=>'40+','pts'=>$data['bpy40'],'lower'=>'40','upper'=>100);
+
+               $arr['bpts_td'][] = $var5;
+
+          $arr['fg_miss'] = $data['FGM'];
+
+
           return $arr;
      }
 
@@ -247,6 +287,8 @@ class myTeams
           for ($i=0; $i < $num; $i++)
           {
                //print_r(json_encode($this->league_data[$i]));
+               //echo ",";
+               print('<pre>');
                print_r($this->league_data[$i]);
           }
      }
