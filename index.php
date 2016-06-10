@@ -161,6 +161,81 @@ class myTeams
           $arr['pass_att'] = $data['Patt'];
           $arr['pass_cmp'] = $data['Pcmp'];
           $arr['pass_icmp'] = $data['Pinc'];
+          $arr['pass_yrd'] = $data['PYrd'];
+          $arr['pass_td'] = $data['PTD'];
+          $arr['pass_int'] = $data['PINT'];
+          $arr['rush_att'] = $data['RuAtt'];
+          $arr['rush_yrd'] = $data['RuYrd'];
+          $arr['rush_td'] = $data['RuTD'];
+          $arr['rec_rb'] = array();
+          $arr['rec_rb']['rec']= $data['Rec'];
+          $arr['rec_rb']['rec_yrd']= $data['RecYrd'];
+          $arr['rec_rb']['rec_td']= $data['RecTD'];
+          $arr['rec_wr'] = array();
+          $arr['rec_wr']['rec']= $data['Wrec'];
+          //$arr['rec_wr']['rec_yrd']= $data['WRecYrd'];
+          //$arr['rec_wr']['rec_td']= $data['WRecTD'];
+          $arr['rec_te'] = array();
+          $arr['rec_te']['rec']= $data['Trec'];
+          //$arr['rec_te']['rec_yrd']= $data['TRecYrd'];
+          //$arr['rec_te']['rec_td']= $data['TRecTD'];
+          $arr['pr_yrd'] = $data['PrYrd'];
+          $arr['pr_td'] = $data['PrTD'];
+          $arr['kr_yrd'] = $data['KrYrd'];
+          $arr['kr_td'] = $data['KrTD'];
+          $arr['idp_dl'] = array();
+          $arr['idp_dl']['tackle']= $data['dlTck'];
+          $arr['idp_dl']['assist']= $data['dlAst'];
+          $arr['idp_dl']['sack']= $data['dlSack'];
+          $arr['idp_de'] = array();
+          $arr['idp_de']['tackle']= $data['dlTck'];
+          $arr['idp_de']['assist']= $data['dlAst'];
+          $arr['idp_de']['sack']= $data['dlSack'];
+          $arr['idp_dt'] = array();
+          $arr['idp_dt']['tackle']= $data['dlTck'];
+          $arr['idp_dt']['assist']= $data['dlAst'];
+          $arr['idp_dt']['sack']= $data['dlSack'];
+
+          $arr['idp_lb'] = array();
+          $arr['idp_lb']['tackle']= $data['lbTck'];
+          $arr['idp_lb']['assist']= $data['lbAst'];
+          $arr['idp_lb']['sack']= $data['lbSack'];
+
+          $arr['idp_olb'] = array();
+          $arr['idp_olb']['tackle']= $data['lbTck'];
+          $arr['idp_olb']['assist']= $data['lbAst'];
+          $arr['idp_olb']['sack']= $data['lbSack'];
+
+          $arr['idp_ilb'] = array();
+          $arr['idp_ilb']['tackle']= $data['lbTck'];
+          $arr['idp_ilb']['assist']= $data['lbAst'];
+          $arr['idp_ilb']['sack']= $data['lbSack'];
+
+          $arr['idp_db'] = array();
+          $arr['idp_db']['tackle']= $data['dbTck'];
+          $arr['idp_db']['assist']= $data['dbAst'];
+          $arr['idp_db']['sack']= $data['dbSack'];
+
+          $arr['idp_cb'] = array();
+          $arr['idp_cb']['tackle']= $data['dbTck'];
+          $arr['idp_cb']['assist']= $data['dbAst'];
+          $arr['idp_cb']['sack']= $data['dbSack'];
+
+          $arr['idp_s'] = array();
+          $arr['idp_s']['tackle']= $data['dbTck'];
+          $arr['idp_s']['assist']= $data['dbAst'];
+          $arr['idp_s']['sack']= $data['dbSack'];
+
+          $arr['idp_db'] = array();
+          $arr['idp_db']['tackle']= $data['dbTck'];
+          $arr['idp_db']['assist']= $data['dbAst'];
+          $arr['idp_db']['sack']= $data['dbSack'];
+
+          $arr['idp_fum_rec'] = $data['FR'];
+          $arr['idp_fum_frc'] = $data['FF'];
+          //$arr['idp_int'] = $data['INT'];
+          $arr['idp_pd'] = $data['PD'];
+          $arr['idp_td'] = $data['DTD'];
 
           return $arr;
      }
