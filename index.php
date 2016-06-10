@@ -116,12 +116,12 @@ class myTeams
 
                     // Add in the positions array
                     $row1 = $raw_data_positions->fetch_assoc();
-                    $league['league']['teams']['positions'] = $row1;
+                    $league['league']['positions'] = $row1;
 
                     // Add in the scoring system
                     $scoringSystem = $raw_data_scoringsystem->fetch_assoc();
                     $alteredScoringSystem = $this->__transformScoringSystem($scoringSystem);
-                    $league['league']['teams']['scoringSystem'] = $alteredScoringSystem;
+                    $league['league']['scoringSystem'] = $alteredScoringSystem;
 
                }
 
